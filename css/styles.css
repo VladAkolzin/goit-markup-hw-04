@@ -350,6 +350,7 @@ img {
 }
 .customers-list-link {
 	color: var(--light-color);
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -540,7 +541,7 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 	height: 100%;
 	background-color: var(--backdrop-back);
 	top: 0;
-	transition: opacity 250ms linear, visibility 250ms linear;
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
 	position: absolute;
@@ -552,12 +553,13 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 	background-color: var(--modal-back);
 	border-radius: 4px;
 	box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-	transition: transform 250ms linear;
+	transition: transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden .modal {
 	transform: translate(-50%, -50%) scale(0);
 }
 .close-button {
+	padding: 0;
 	width: 24px;
 	height: 24px;
 	display: flex;
@@ -570,14 +572,17 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 	background-color: var(--border-color);
 	border: 1px solid rgba(0, 0, 0, 0.10);
 	cursor: pointer;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-icon {
 	fill: var(--dark-color);
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-button:active {
+.close-button:hover, .close-button:focus {
 	background-color: var(--ocean-color);
+	border: none;
 }
-.close-button:active .close-icon {
+.close-button:focus .close-icon, .close-button:hover .close-icon {
 	fill: var(--back-color);
 }
 .is-hidden {
