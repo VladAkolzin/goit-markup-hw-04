@@ -146,7 +146,7 @@ img {
 /*-------------main styles--------*/
 .hero {
 	background-image: linear-gradient( to bottom, var(--grey-color), var(--grey-color)
-	), url(/./images/people-office.jpg);
+	), url(../images/people-office.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
