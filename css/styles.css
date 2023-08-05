@@ -97,7 +97,7 @@ img {
 	letter-spacing: 0.02em;
 	color: var(--dark-color);
 	padding-top: 24px;
-	margin-bottom: 24px;
+	padding-bottom: 24px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
